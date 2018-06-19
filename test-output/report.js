@@ -7,7 +7,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 10757187378,
+  "duration": 10006953865,
   "status": "passed"
 });
 formatter.scenario({
@@ -65,21 +65,25 @@ formatter.match({
   "location": "Steps.user_is_on_Yahoo_Login_Page()"
 });
 formatter.result({
-  "duration": 247072051,
+  "duration": 222765234,
   "status": "passed"
 });
 formatter.match({
   "location": "Steps.user_submits_the_name(DataTable)"
 });
 formatter.result({
-  "duration": 726469500,
+  "duration": 694577879,
   "status": "passed"
 });
 formatter.match({
   "location": "Steps.user_submits_the_invalid_password(DataTable)"
 });
 formatter.result({
-  "duration": 9777860577,
+  "duration": 9573579137,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 3072652779,
   "status": "passed"
 });
 });

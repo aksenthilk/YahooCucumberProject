@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 10757187378,
+              "duration": 10006953865,
               "status": "passed"
             },
             "match": {
@@ -18,12 +18,23 @@
         "name": "Validate Invalid Password",
         "description": "",
         "id": "yahoo-login;validate-invalid-password",
+        "after": [
+          {
+            "result": {
+              "duration": 3072652779,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Steps.tearDown()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 247072051,
+              "duration": 222765234,
               "status": "passed"
             },
             "line": 3,
@@ -35,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 726469500,
+              "duration": 694577879,
               "status": "passed"
             },
             "line": 4,
@@ -61,7 +72,7 @@
           },
           {
             "result": {
-              "duration": 9777860577,
+              "duration": 9573579137,
               "status": "passed"
             },
             "line": 7,
