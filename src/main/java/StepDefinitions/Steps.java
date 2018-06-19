@@ -32,7 +32,7 @@ public class Steps{
         logger.log(Status.INFO, "Login to Senthil");
         logger.log(Status.PASS, "Verified");
         
-      
+        extent.flush();
 		driver  = new ChromeDriver();
 		driver.get("https://login.yahoo.com/");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
