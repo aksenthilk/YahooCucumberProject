@@ -6,11 +6,11 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="G:\\SeleniumCucumberWorkSpace\\Yahoo\\src\\test\\java\\FeatureFile\\Login.feature",
+@CucumberOptions(features="G:\\SeleniumCucumberWorkSpace\\Yahoo\\src\\main\\java\\FeatureFile\\Login.feature",
                  glue = {"StepDefinitions"},
                  format = {"pretty","html:test-output","json:target\\json\\output.json"}
                 )
 
-public class Runner {
+public class RunnerTest{
 
 }

@@ -7,4 +7,3 @@ When user submits the name
 Then user submits the invalid password
 |invalidpassword|
 |aksenthilk     |
-Then error message is displayed

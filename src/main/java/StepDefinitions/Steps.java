@@ -8,13 +8,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import cucumber.api.DataTable;
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import junit.framework.Assert;
 
-public class Steps {
+public class Steps{
 	WebDriver driver;
 	@Before
 	public void setUp(){
@@ -22,6 +22,12 @@ public class Steps {
 		driver  = new ChromeDriver();
 		driver.get("https://login.yahoo.com/");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+	}
+	@After
+	public void tearDown(){
+		System.out.println("Closing the browser");
+		driver.close();
 		
 	}
 	@Given("^User is on Yahoo Login Page$")
@@ -61,12 +67,7 @@ public class Steps {
 	    
 	}
 
-	@Then("^error message is displayed$")
-	public void error_message_is_displayed() throws Throwable {
-		String error = driver.findElement(By.xpath("//p[@class='error-msg']")).getText();
-		//Assert.assertEquals("Invalid password. Please try again", error);
-	    
-	}
+	
 
 
 }
