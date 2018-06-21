@@ -1,4 +1,32 @@
 -------------------------------------------------------------------------------
 Test set: TestRunner.RunnerTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.655 sec
+Tests run: 12, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 70.818 sec <<< FAILURE!
+Then user submits the invalid password(Scenario: Validate Invalid Password)  Time elapsed: 0.021 sec  <<< FAILURE!
+junit.framework.ComparisonFailure: expected:<Yahoo[o]> but was:<Yahoo[]>
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at StepDefinitions.Steps.user_submits_the_invalid_password(Steps.java:93)
+	at ?.Then user submits the invalid password(G:/SeleniumCucumberWorkSpace/Yahoo/src/main/java/FeatureFile/Login.feature:9)
+
+Scenario: Validate Invalid Password  Time elapsed: 0.022 sec  <<< FAILURE!
+junit.framework.ComparisonFailure: expected:<Yahoo[o]> but was:<Yahoo[]>
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at StepDefinitions.Steps.user_submits_the_invalid_password(Steps.java:93)
+	at ?.Then user submits the invalid password(G:/SeleniumCucumberWorkSpace/Yahoo/src/main/java/FeatureFile/Login.feature:9)
+
+Then user lands on Home page(Scenario: Validate Title)  Time elapsed: 0.001 sec  <<< FAILURE!
+junit.framework.ComparisonFailure: expected:<Testing Controls[ ]> but was:<Testing Controls[]>
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at StepDefinitions.Steps.user_lands_on_Home_page(Steps.java:121)
+	at ?.Then user lands on Home page(G:/SeleniumCucumberWorkSpace/Yahoo/src/main/java/FeatureFile/Login.feature:17)
+
+Scenario: Validate Title  Time elapsed: 0.001 sec  <<< FAILURE!
+junit.framework.ComparisonFailure: expected:<Testing Controls[ ]> but was:<Testing Controls[]>
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at StepDefinitions.Steps.user_lands_on_Home_page(Steps.java:121)
+	at ?.Then user lands on Home page(G:/SeleniumCucumberWorkSpace/Yahoo/src/main/java/FeatureFile/Login.feature:17)
+
