@@ -48,7 +48,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Jun 22, 2018 01:27:52 AM</span>
+                    <span class='label suite-start-time blue darken-3'>Jun 22, 2018 02:00:36 AM</span>
 				</a>
 			</li>
 			<li>
@@ -75,6 +75,7 @@
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
 						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -152,10 +153,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='33.333%'><span class='strong'>1</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='66.667%'>2</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>3</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -167,10 +168,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='77.778%'><span class='strong'>7</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='22.222%'>2</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>3</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='66.667%'>6</span> others
 				</div>
 			</div>
 		</div>
@@ -187,7 +188,7 @@
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Yahoo Login</span>
-						<span class='test-time'>Jun 22, 2018 01:27:53 AM</span>
+						<span class='test-time'>Jun 22, 2018 02:00:36 AM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
@@ -195,41 +196,55 @@
 	<div class='category-list'>
 		<span class='category label white-text'>@Yahoo</span>
 	</div>
-	<span class='duration right label'>0h 0m 30s+390ms</span>
+	<span class='duration right label'>0h 0m 13s+798ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">Validate Invalid Password</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node given pass' status='pass'>
+		<li test-id='3' class='node given fail' status='fail'>
 			
 			<b>Given</b>
 			
 			<span class="bdd-step-name">Given User is on Yahoo Login Page</span>
-				<div class='pre'>passed</div>
+				<div class='pre'><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.12 seconds
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'LAPTOP-VDF4BQTI', ip: '192.168.1.208', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\Senthil\AppData\Local\Temp\scoped_dir3748_30895}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=67.0.3396.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 41e89c037a553b7517615d4eb63b21cd
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:316)
+	at StepDefinitions.Steps.user_is_on_Yahoo_Login_Page(Steps.java:66)
+	at ?.Given User is on Yahoo Login Page(G:/SeleniumCucumberWorkSpace/Yahoo/src/main/java/FeatureFile/Login.feature:5)
+</pre></div>
 			
 		</li>
-		<li test-id='4' class='node when pass' status='pass'>
+		<li test-id='4' class='node when skip' status='skip'>
 			
 			<b>When</b>
 			
 			<span class="bdd-step-name">When user submits the name</span>
 				<div class='pre'><table><tr><td>useryahooemailid</td></tr><tr><td>aksenthil2002@yahoo.co.in</td></tr></table></div>
-				<div class='pre'>passed</div>
+				<div class='pre'>skipped</div>
 			
 		</li>
-		<li test-id='5' class='node then fail' status='fail'>
+		<li test-id='5' class='node then skip' status='skip'>
 			
 			<b>Then</b>
 			
 			<span class="bdd-step-name">Then user submits the invalid password</span>
 				<div class='pre'><table><tr><td>invalidpassword</td></tr><tr><td>aksenthilk</td></tr></table></div>
-				<div class='pre'><textarea>junit.framework.ComparisonFailure: expected:<Yahoo[o]> but was:<Yahoo[]>
-	at junit.framework.Assert.assertEquals(Assert.java:100)
-	at junit.framework.Assert.assertEquals(Assert.java:107)
-	at StepDefinitions.Steps.user_submits_the_invalid_password(Steps.java:98)
-	at ✽.Then user submits the invalid password(G:/SeleniumCucumberWorkSpace/Yahoo/src/main/java/FeatureFile/Login.feature:9)
-</textarea></div>
+				<div class='pre'>skipped</div>
 			
 		</li>
 	</ul>
@@ -238,75 +253,110 @@
 	<div class='category-list'>
 		<span class='category label white-text'>@uiPractice</span>
 	</div>
-	<span class='duration right label'>0h 0m 36s+852ms</span>
+	<span class='duration right label'>0h 0m 11s+706ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">Validate Title</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='7' class='node given pass' status='pass'>
+		<li test-id='7' class='node given fail' status='fail'>
 			
 			<b>Given</b>
 			
 			<span class="bdd-step-name">Given user is on uipractice page</span>
-				<div class='pre'>passed</div>
+				<div class='pre'><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.11 seconds
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'LAPTOP-VDF4BQTI', ip: '192.168.1.208', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\Senthil\AppData\Local\Temp\scoped_dir12556_9424}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=67.0.3396.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: ee5ec3de5028149bacd46fd791d8f631
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:316)
+	at StepDefinitions.Steps.user_is_on_uipractice_page(Steps.java:110)
+	at ?.Given user is on uipractice page(G:/SeleniumCucumberWorkSpace/Yahoo/src/main/java/FeatureFile/Login.feature:15)
+</pre></div>
 			
 		</li>
-		<li test-id='8' class='node when pass' status='pass'>
+		<li test-id='8' class='node when skip' status='skip'>
 			
 			<b>When</b>
 			
 			<span class="bdd-step-name">When clicks on Home Link</span>
-				<div class='pre'>passed</div>
+				<div class='pre'>skipped</div>
 			
 		</li>
-		<li test-id='9' class='node then fail' status='fail'>
+		<li test-id='9' class='node then skip' status='skip'>
 			
 			<b>Then</b>
 			
 			<span class="bdd-step-name">Then user lands on Home page</span>
-				<div class='pre'><textarea>junit.framework.ComparisonFailure: expected:<Testing Controls[ ]> but was:<Testing Controls[]>
-	at junit.framework.Assert.assertEquals(Assert.java:100)
-	at junit.framework.Assert.assertEquals(Assert.java:107)
-	at StepDefinitions.Steps.user_lands_on_Home_page(Steps.java:126)
-	at ✽.Then user lands on Home page(G:/SeleniumCucumberWorkSpace/Yahoo/src/main/java/FeatureFile/Login.feature:17)
-</textarea></div>
+				<div class='pre'>skipped</div>
 			
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='10' status='pass'>
+<div class='scenario node' test-id='10' status='fail'>
 	<div class='category-list'>
 		<span class='category label white-text'>@Justanswer</span>
 	</div>
-	<span class='duration right label'>0h 0m 19s+356ms</span>
+	<span class='duration right label'>0h 0m 7s+779ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">Login to Justanswer</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='11' class='node given pass' status='pass'>
+		<li test-id='11' class='node given fail' status='fail'>
 			
 			<b>Given</b>
 			
 			<span class="bdd-step-name">Given user in on Justanswer Home page</span>
-				<div class='pre'>passed</div>
+				<div class='pre'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.24 seconds
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'LAPTOP-VDF4BQTI', ip: '192.168.1.208', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\Senthil\AppData\Local\Temp\scoped_dir11588_18837}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=67.0.3396.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 03197e0163b8d2da3f22388a4930c295
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:316)
+	at StepDefinitions.Steps.user_in_on_Justanswer_Home_page(Steps.java:133)
+	at ?.Given user in on Justanswer Home page(G:/SeleniumCucumberWorkSpace/Yahoo/src/main/java/FeatureFile/Login.feature:21)
+</pre></div>
 			
 		</li>
-		<li test-id='12' class='node when pass' status='pass'>
+		<li test-id='12' class='node when skip' status='skip'>
 			
 			<b>When</b>
 			
 			<span class="bdd-step-name">When user clicks on continue button</span>
-				<div class='pre'>passed</div>
+				<div class='pre'>skipped</div>
 			
 		</li>
-		<li test-id='13' class='node then pass' status='pass'>
+		<li test-id='13' class='node then skip' status='skip'>
 			
 			<b>Then</b>
 			
 			<span class="bdd-step-name">Then user should see the error message "Enter your question here to continue..."</span>
-				<div class='pre'>passed</div>
+				<div class='pre'>skipped</div>
 			
 		</li>
 	</ul>
@@ -388,7 +438,7 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jun 22, 2018 01:27:53 AM</td>
+										<td>Jun 22, 2018 02:00:36 AM</td>
 										<td class='linked' test-id='2'>Yahoo Login.Validate Invalid Password</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
@@ -422,7 +472,7 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jun 22, 2018 01:28:24 AM</td>
+										<td>Jun 22, 2018 02:00:54 AM</td>
 										<td class='linked' test-id='6'>Yahoo Login.Validate Title</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
@@ -435,13 +485,13 @@
 					<div class='category-heading'>
 						<span class='category-name'>@Justanswer</span>
 						<span class='category-status right'>
-							<span class='label pass'>1</span>
+							<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
 							
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 					
@@ -456,9 +506,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jun 22, 2018 01:29:01 AM</td>
+										<td>Jun 22, 2018 02:01:10 AM</td>
 										<td class='linked' test-id='10'>Yahoo Login.Login to Justanswer</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -504,8 +554,8 @@
 
                         <li class='exception displayed active'>
                             <div class='exception-heading'>
-                                <span class='exception-name'>junit.framework.ComparisonFailure</span>
-                                <span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+                                <span class='exception-name'>org.openqa.selenium.WebDriverException</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>3</span></span>
                             </div>
                             <div class='exception-content hide'>
                                 <div class='exception-tests'>
@@ -519,24 +569,78 @@
                                         </thead>
                                         <tbody>
                                                     <tr>
-                                                        <td>Jun 22, 2018 01:28:15 AM</td>
-                                                        <td class='linked' test-id='5'>Yahoo Login.Validate Invalid Password.Then user submits the invalid password</td>
-                                                        <td><pre><textarea>junit.framework.ComparisonFailure: expected:<Yahoo[o]> but was:<Yahoo[]>
-	at junit.framework.Assert.assertEquals(Assert.java:100)
-	at junit.framework.Assert.assertEquals(Assert.java:107)
-	at StepDefinitions.Steps.user_submits_the_invalid_password(Steps.java:98)
-	at ✽.Then user submits the invalid password(G:/SeleniumCucumberWorkSpace/Yahoo/src/main/java/FeatureFile/Login.feature:9)
-</textarea></pre></td>
+                                                        <td>Jun 22, 2018 02:00:44 AM</td>
+                                                        <td class='linked' test-id='3'>Yahoo Login.Validate Invalid Password.Given User is on Yahoo Login Page</td>
+                                                        <td><pre><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.12 seconds
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'LAPTOP-VDF4BQTI', ip: '192.168.1.208', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\Senthil\AppData\Local\Temp\scoped_dir3748_30895}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=67.0.3396.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 41e89c037a553b7517615d4eb63b21cd
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:316)
+	at StepDefinitions.Steps.user_is_on_Yahoo_Login_Page(Steps.java:66)
+	at ?.Given User is on Yahoo Login Page(G:/SeleniumCucumberWorkSpace/Yahoo/src/main/java/FeatureFile/Login.feature:5)
+</pre></pre></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Jun 22, 2018 01:29:01 AM</td>
-                                                        <td class='linked' test-id='9'>Yahoo Login.Validate Title.Then user lands on Home page</td>
-                                                        <td><pre><textarea>junit.framework.ComparisonFailure: expected:<Testing Controls[ ]> but was:<Testing Controls[]>
-	at junit.framework.Assert.assertEquals(Assert.java:100)
-	at junit.framework.Assert.assertEquals(Assert.java:107)
-	at StepDefinitions.Steps.user_lands_on_Home_page(Steps.java:126)
-	at ✽.Then user lands on Home page(G:/SeleniumCucumberWorkSpace/Yahoo/src/main/java/FeatureFile/Login.feature:17)
-</textarea></pre></td>
+                                                        <td>Jun 22, 2018 02:00:59 AM</td>
+                                                        <td class='linked' test-id='7'>Yahoo Login.Validate Title.Given user is on uipractice page</td>
+                                                        <td><pre><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.11 seconds
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'LAPTOP-VDF4BQTI', ip: '192.168.1.208', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\Senthil\AppData\Local\Temp\scoped_dir12556_9424}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=67.0.3396.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: ee5ec3de5028149bacd46fd791d8f631
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:316)
+	at StepDefinitions.Steps.user_is_on_uipractice_page(Steps.java:110)
+	at ?.Given user is on uipractice page(G:/SeleniumCucumberWorkSpace/Yahoo/src/main/java/FeatureFile/Login.feature:15)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Jun 22, 2018 02:01:14 AM</td>
+                                                        <td class='linked' test-id='11'>Yahoo Login.Login to Justanswer.Given user in on Justanswer Home page</td>
+                                                        <td><pre><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.24 seconds
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'LAPTOP-VDF4BQTI', ip: '192.168.1.208', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\Senthil\AppData\Local\Temp\scoped_dir11588_18837}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=67.0.3396.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 03197e0163b8d2da3f22388a4930c295
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:316)
+	at StepDefinitions.Steps.user_in_on_Justanswer_Home_page(Steps.java:133)
+	at ?.Given user in on Justanswer Home page(G:/SeleniumCucumberWorkSpace/Yahoo/src/main/java/FeatureFile/Login.feature:21)
+</pre></pre></td>
                                                     </tr>
                                         </tbody>
                                     </table>
@@ -580,19 +684,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jun 22, 2018 01:27:52 AM</div>
+					<div class='panel-lead'>Jun 22, 2018 02:00:36 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jun 22, 2018 01:29:23 AM</div>
+			 		<div class='panel-lead'>Jun 22, 2018 02:01:22 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>90,612ms</div>
+					<div class='panel-lead'>45,969ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -643,11 +747,11 @@
 						</tr>
 						<tr>
 							<td>@Justanswer</td>
+							<td>0</td>
 							<td>1</td>
 							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 					</table>
@@ -671,23 +775,23 @@
 				skipParent: 0,
 				exceptionsParent: 1,
 				
-				passChild: 1,
-				failChild: 2,
+				passChild: 0,
+				failChild: 3,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 2,
+				exceptionsChild: 3,
 				
-				passGrandChild: 7,
-				failGrandChild: 2,
+				passGrandChild: 0,
+				failGrandChild: 3,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 6,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 2,
+				exceptionsGrandChild: 9,
 			};
 		</script>
 		
